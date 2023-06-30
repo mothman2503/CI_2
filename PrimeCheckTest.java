@@ -22,14 +22,17 @@ public class PrimeCheckTest {
   // --------------------------------------------------------------- //
   @Test
   public void testPrimes() {
-    /* ToDo: insert a test here */
-    assertEquals("this will fail", true, false);
+    int[] arr = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+    for (int i = 0; i < arr.length; ++i) {
+      assertEquals("Test negative number " + arr[i], false, PrimeCheck.isPrime(arr[i]));
+    }
   }
 
   // --------------------------------------------------------------- //
   @Test
   public void testNonPrimes() {
-    /* ToDo: insert a test here */
-    assertEquals("this will fail", true, false);
+    assertEquals("Test 6", false, PrimeCheck.isPrime(6));
+    assertEquals("Test 8", false, PrimeCheck.isPrime(8));
+    assertEquals("Test 21", false, PrimeCheck.isPrime(21));
   }
 }
